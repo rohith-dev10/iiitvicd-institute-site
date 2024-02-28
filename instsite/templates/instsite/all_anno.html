@@ -1,0 +1,87 @@
+{% extends "instsite/base2.html" %}
+
+{% load static %}
+
+{% block link %}
+<link rel="stylesheet" href="{% static 'instsite/nav.css' %}">
+<link rel="stylesheet" href="{% static 'instsite/footer.css' %}">
+<link rel="stylesheet" href="{% static 'instsite/all_news.css' %}">
+{% endblock %}
+
+{% block script %}
+<script src="{% static 'instsite/home.js' %}"></script>
+{% endblock %}
+{% block nav %}{% include "instsite/nav.html" with image='instsite/IIITV-ICD_Logo_nobg.png' %}{% endblock %}
+
+{% block title %}IIITVICD Today{% endblock %}
+
+{% block main %}
+<div class="main">
+    <img id="main_img" src="{% static 'instsite/abt.jfif' %}" alt="">
+    <div id="head_title">
+        <div id="head_title_ins">
+            <h1>Announcements</h1>
+        </div>
+    </div>
+    <div id="alln_main_body">
+        <div id="select">
+            <div class="select">
+                <p><a href="{% url 'all_news' 0 %}">News</a></p>
+            </div>
+            <div class="select" style="border-bottom: 3.5px solid maroon;">
+                <p><a href="{% url 'all_anno' 0 %}"  style="color: maroon;">Announcements</a></p>
+            </div>
+            <div class="select">
+                <p><a href="{% url 'all_eve' 0 %}">Events</a></p>
+            </div>
+        </div>
+        <div id="all_newss">
+            {% for anno in annos %}
+                <div class="anno">
+                    <div class="anno_date">
+                        <p>{{anno.date}}</p>
+                    </div>
+                    <div class="anno_head">
+                        <p><a href="{% url 'anno_det' anno.id %}">{{anno.head}}</a></p>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        <div id="change_page">
+            {% if page != 0 %}
+                <div class="select1">
+                    <p><a href="{% url 'all_anno' 0 %}"><svg xmlns="http://www.w3.org/2000/svg" height="11px" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg><svg xmlns="http://www.w3.org/2000/svg" height="11px" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
+                        First</a></p>
+                </div>
+            {% endif %}
+            {% if page != 0 %}
+                <div class="select1">
+                    <p><a href="{% url 'all_anno' page|add:-1 %}"><svg xmlns="http://www.w3.org/2000/svg" height="11px" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
+                        Previous</a></p>
+                </div>
+            {% endif %}
+                <div class="select1">
+                    <p>{{page|add:1}}</p>
+                </div>
+            {% if page != no_pages|add:-1 %}
+                <div class="select1">
+                    <p><a href="{% url 'all_anno' page|add:1 %}">
+                        Next <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" style="
+                        height: 11px;
+                    "><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"></path></svg></a></p>
+                </div>
+            {% endif %}
+            {% if page != no_pages|add:-1 %}
+                <div class="select1">
+                    <p><a href="{% url 'all_anno' no_pages|add:-1 %}">
+                        Last <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" style="
+                        height: 11px;
+                    "><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" style="
+                    height: 11px;
+                "><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"></path></svg></a></p>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}

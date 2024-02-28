@@ -1,0 +1,244 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+.home{
+    color: #424242;
+}
+.today{
+    color: #979797;
+}
+
+.sp_n_t{
+    padding-bottom: 16px;
+    border-bottom: 1px solid #dbdbdb;
+}
+.view_all{
+    width: 130px;
+}
+.view_all a:hover{
+    margin-left: auto;
+}
+
+#news_title{
+    font-size: 28px;
+    margin-top: 64px;
+    margin-left: 6vw;
+    margin-right: 6vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+#news{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 64px;
+    font-family: system-ui;
+}
+
+#news_pri{
+    background-size: cover;
+    width: 42vw;
+    margin-top: 48px;
+    min-width: 480px;
+    height: 30vw;
+    min-height: 400px;
+}
+
+#news_pri img{
+    height: 30vw;
+    object-fit: cover;
+    width: 100%;
+    min-height: 400px;
+}
+.news_pri_head p:first-child:hover {
+    text-decoration-line: underline;
+    text-decoration-color: white;
+    cursor: pointer;
+}
+.news_pri_head {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.news_pri_head p:last-child{
+    color: white;
+    padding-left: 16px;
+    margin-bottom: 24px;
+    font-weight: bold;
+    font-size: 19px;
+}
+.news_pri_head a{
+    color: white;
+}
+.news_pri_head p:first-child{
+    margin-top: auto;
+    padding-left: 16px;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#news_sec{
+    display: flex;
+    flex-direction: column;
+    margin-top: 48px;
+    justify-content: center;
+}
+
+.news_sec{
+    display: flex;
+    width: 30vw;
+    min-width: 450px;
+    border-bottom: 1px solid #e6e6e6;
+    margin-bottom: 16px;
+}
+
+.news_sec_head:hover{
+    text-decoration-line: underline;
+}
+.news_sec_head{
+    display: flex;
+    flex-direction: column;
+    margin-right: auto;
+    font-family: system-ui;
+}
+.news_sec_head p:last-child{
+    font-size: 17px;
+    font-weight: bold;
+    color: maroon;
+}
+.news_sec_head p:first-child{
+    font-size: 21px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.news_sec img{
+    object-fit: cover;
+    object-position: center;
+    height: 140px;
+    width: 140px;
+}
+
+#anno{
+    margin: 30px 0;
+}
+
+#anno_cont{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.anno{
+    margin: 16px 10px;
+    padding: 16px 14px;
+    font-family: system-ui;
+    display: flex;
+    border: 1px solid #b4b4b4;
+    flex-direction: column;
+    width: 21%;
+    min-width: 400px;
+    max-height: 126px;
+    overflow: hidden;
+    transition: background-color 0.3s ease-out;
+    /* box-shadow: 0px 0px 35px -15px rgba(0,0,0,0.4); */
+}
+
+.anno:hover{
+    background-color: #e6e6e6;
+    transition: background-color 0.3s ease-out;
+}
+.anno_head a:hover{
+    text-decoration-line: underline;
+}
+
+.anno_date{
+    font-size: 20px;
+    font-weight: bold;
+    color: maroon;
+}
+
+.anno_head{
+    margin-top: 16px;
+    font-size: 21px;
+    font-weight: bold;
+    width: 100%;
+}
+
+#eve{
+    margin-top: 30px;
+    margin-bottom: 64px;
+}
+
+#eve_cont{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.eve{
+    min-width: 460px;
+    width: 42%;
+    margin: 16px 8px;
+}
+
+.eve_cont{
+    display: flex;
+    width: -webkit-fill-available;
+    transition: background-color 0.3s ease-out;
+}
+
+.eve_cont:hover{
+    background-color: #e6e6e6;
+    transition: background-color 0.3s ease-out;
+}
+
+.eve_date{
+    padding: 16px 24px;
+    border: 1px solid #b3b3b3;
+    color: maroon;
+}
+
+.eve_date p{
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.eve_date h1{
+    font-size: 74px;
+}
+
+.eve_head{
+    padding: 16px 24px;
+    border: 1px solid #b3b3b3;
+    border-left: none;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: flex;
+    flex-direction: column;
+    width: -webkit-fill-available;
+    overflow-x: hidden;
+}
+
+.eve_head a:hover{
+    text-decoration: underline;
+}
+
+.eve_head h1{
+    font-size: 40px;
+    margin-bottom: auto;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.eve_head p{
+    font-size: 18px;
+}

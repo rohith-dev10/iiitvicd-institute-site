@@ -1,0 +1,142 @@
+.nav{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    z-index: 1;
+}
+
+#head_title{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#head_title_inst{
+    text-align: center;
+    color: white;
+    font-size: 4vw;
+    padding: 128px;
+    display: flex;
+    justify-content: center;
+}
+
+.new_nav{
+    padding-bottom: 2px;
+    background: white;
+    box-shadow: 0px 0px 50px -32px rgba(0,0,0,1);
+}
+
+.head video{
+    width: 100%;
+    object-fit: cover;
+    height: 100vh;
+}
+
+.nav_img{
+    padding-top: 40px;
+    padding-left: 4vw;
+    margin-right: 48px;
+    height: 155px;
+}
+.new_nav_img{
+    padding-top: 10px;
+    padding-left: 36px;
+    margin-right: 48px;
+    height: 90px;
+}
+
+#nav_ul{
+    display: none;
+    list-style: none;
+}
+.nav>ul>li>div{
+    position: relative;
+    padding: 8px 0px;
+    cursor: default;
+    border-right: 1px solid #e5e5e5;
+    padding-left: 8px;
+    transition: background-color 0.5s ease-out;
+}
+.nav_ul_li_div:hover,.nav_ul_li_div:hover .nav_ul_a{
+    background-color: #f0f0f0;
+    transition: background-color 0.5s ease-out;
+    color: black;
+}
+.nav_ul_li_div:hover .nav_drop{
+    display: block;
+}
+
+.nav>ul {
+    display: none;
+    list-style: none;
+}
+.nav_ul_a{
+    text-decoration: none;
+    font-size: 21px;
+    color: #646464;
+    margin-right: 16px;
+}
+.nav_drop ul a{
+    text-decoration: none;
+    display: flex;
+    font-size: 17px;
+    color: #646464;
+}
+
+.nav_drop{
+    position: absolute;
+    background-color: #f0f0f0;
+    margin-top: 8px;
+    left: 0;
+    width: -webkit-fill-available;
+    min-width: max-content;
+    box-shadow: 13px 14px 16px -13px rgba(0,0,0,0.27);
+    display: none;
+}
+
+.nav_drop ul{
+    list-style: none;
+}
+.nav_drop li::after{
+    content: '';
+    display: block;
+    position: relative;
+    height: 1px;
+    background: #dadada;
+    margin-top: 16px;
+}
+.nav_drop li:hover a,.nav_drop li:hover{
+    background-color: white;
+    color: black;
+    transition: background-color 0.5s ease-out;
+}
+.nav_drop li{
+    padding: 0 16px;
+    padding-top: 16px;
+    transition: background-color 0.5s ease-out;
+}
+
+
+.login_button{
+    margin-right: 48px;
+    border: 2px solid maroon;
+    color: maroon;
+    padding: 4px;
+    font-weight: bold;
+    font-family: system-ui;
+    font-size: 30px;
+}
+
+@media screen and (max-width:1080px){
+    .nav_ul{
+        display: none;
+        list-style: none;
+    }
+}

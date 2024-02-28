@@ -1,0 +1,103 @@
+{% extends "instsite/base2.html" %}
+
+{% load static %}
+
+{% block link %}
+<link rel="stylesheet" href="{% static 'instsite/nav2.css' %}">
+<link rel="stylesheet" href="{% static 'instsite/footer.css' %}">
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    #dum{
+        height:120px;
+    }
+
+    #ver_cert{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 32px 0;
+        margin-bottom: 64px;
+    }
+    #ver_cert_head{
+        font-size: 35px;
+        padding: 0 16px;
+        color: maroon;
+        margin-bottom: 32px;
+    }
+    .ver_cert{
+        padding: 48px 36px;
+        border-radius: 9px;
+        width: 400px;
+        box-shadow: 2px 2px 13px -6px rgb(0 0 0 / 36%);
+    }
+    .ver_cert form{
+        display: flex;
+        flex-direction: column;
+    }
+    #hash{
+        height: 48px;
+        border: none;
+        border-radius: 23px;
+        font-size: 17px;
+        margin-bottom: 48px;
+        color: #717171;
+        font-weight: bold;
+        background-color: #f5f5f5;
+        padding: 0 8px;
+        padding-left: 16px;
+    }
+    .ver_cert form button{
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 19px;
+        padding: 13px 24px;
+        border-radius: 32px;
+        /* text-transform: uppercase; */
+        border: none;
+        color: white;
+        width: 128px;
+        background-color: maroon;
+        font-weight: bold;
+        box-shadow: 0px 0px 13px -6px rgb(0 0 0 / 42%);
+        cursor: pointer;
+    }
+    .ver_cert form button:hover{
+        background-color: #700000;
+    }
+
+    #hash:focus-visible{
+        outline: none;
+    }
+
+
+</style>
+{% endblock %}
+{% block script %}
+<script src="{% static 'instsite/stat.js' %}"></script>
+{% endblock %}
+{% block title %}Verify Certificate{% endblock %}
+{% block nav %}{% include "instsite/nav2.html" with image='instsite/IIITV-ICD_Logo_nobg_no111.png' %}{% endblock %}
+{% block main %}
+<div class="main">
+    <div id="dum"></div>
+    <div id="ver_cert">
+        <div id="ver_cert_head">
+            <h1>Verify Certificate</h1>
+        </div>
+        <div class="ver_cert">
+            <p style="overflow: hidden;text-overflow:ellipsis;">{{hash}}</p>
+            <h1 style="margin-top: 24px;">
+                {% if success %}
+                    It is a Valid Certificate Transaction Hash
+                {% else %}
+                    It is not a Valid Certificate Transaction Hash
+                {% endif %}
+            </h1>
+        </div>
+    </div>
+</div>
+{% endblock %}

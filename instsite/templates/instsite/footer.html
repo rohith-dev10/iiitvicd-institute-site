@@ -1,0 +1,40 @@
+{% load static %}
+
+{% block footer %}
+<footer>
+    <div class="footer_img">
+        <img src="{% static 'instsite/IIITV-ICD_logo_nobg_no111.png' %}" alt="IIITV-ICD">
+        <p>IIIT VADODARA</p>
+        <p>INTERNATIONAL CAMPUS DIU</p>
+    </div>
+    <div class="footer">
+        <div class="footer_h_ul_li">
+            <h3>BROWSE</h3>
+            <ul>
+                <li><a href="#">FAQs</a></li>
+                <li><a href="#">People</a></li>
+                <li><a href="#">Committe</a></li>
+                <li><a href="{% url 'verify_certificate' %}">Verify Certificate</a></li>
+            </ul>
+        </div>
+        <div class="footer_h_ul_li">
+            <h3>CONNECT WITH US</h3>
+            <ul>
+                <li><a href="#">Important Contacts</a></li>
+                <li><a href="#">Address, Maps and Telephone</a></li>
+                <li><a href="#">RTI</a></li>
+                <li><a href="#">Map and Directions</a></li>
+            </ul>
+        </div>
+        <div class="footer_h_ul_li">
+            <h3>FOLLOW US</h3>
+            <ul>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Linkedin</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+{% endblock %}

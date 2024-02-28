@@ -1,0 +1,31 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="shortcut icon" href="{%  static 'instsite/IIITV-ICD_logo_nobg_no111.png' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Taviraj&display=swap" rel="stylesheet">
+    {% block link %}{% endblock %}
+</head>
+<body style="display: flex;flex-direction: column;">
+    <div class="head">
+        {% include "instsite/nav.html" with image="instsite/IIITV-ICD_Logo_nobg.png" %}
+        <video src="{% static 'instsite/main.mp4' %}" autoplay muted loop ></video>
+        <div id="head_title">
+            <div id="head_title_inst">
+                <h1>This is IIITVICD</h1>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        {% block main %}{% endblock %}
+    </div>
+    {% include "instsite/footer.html" %}
+    {% block script %}{% endblock %}
+</body>
+</html>

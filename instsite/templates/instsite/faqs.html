@@ -1,0 +1,30 @@
+{% extends "instsite/base2.html" %}
+
+{% load static %}
+
+{% block link %}
+<link rel="stylesheet" href="{% static 'instsite/nav2.css' %}">
+<link rel="stylesheet" href="{% static 'instsite/footer.css' %}">
+<link rel="stylesheet" href="{% static 'instsite/all_news.css' %}">
+{% endblock %}
+
+{% block script %}
+<script src="{% static 'instsite/stat.js' %}"></script>
+{% endblock %}
+{% block nav %}{% include "instsite/nav.html" with image='instsite/IIITV-ICD_Logo_nobg_no111.png' %}{% endblock %}
+
+{% block title %}IIITVICD | FAQs{% endblock %}
+
+{% block main %}
+<div class="main">
+    <img id="main_img" src="{% static 'instsite/abt.jfif' %}" alt="">
+    <div id="head_title">
+        <div id="head_title_ins">
+            <h1>FAQs</h1>
+        </div>
+    </div>
+    <div id="alln_main_body">
+        
+    </div>
+</div>
+{% endblock %}

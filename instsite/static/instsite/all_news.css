@@ -1,0 +1,130 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+#main_img{
+    width: 100%;
+    object-fit: cover;
+    height: 60vh;
+}
+
+#head_title{
+    position: absolute;
+    top: 0;
+    height: 60vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+#head_title_ins{
+    padding-bottom: 120px;
+    width: fit-content;
+    color: white;
+    font-size: 35px;
+    /* background: radial-gradient(circle, rgba(178,178,186,0) 53%, rgba(54,54,54,0.5469538157059699) 100%);*/
+}
+
+.anno{
+    margin: 16px 10px;
+    padding: 16px 14px;
+    font-family: system-ui;
+    display: flex;
+    border: 1px solid #b4b4b4;
+    flex-direction: column;
+    min-width: 420px;
+    width: 87%;
+    height: 90px;
+    overflow: hidden;
+    transition: background-color 0.3s ease-out;
+}
+
+.anno:hover{
+    background-color: #e6e6e6;
+    transition: background-color 0.3s ease-out;
+}
+.anno_head a:hover{
+    text-decoration-line: underline;
+}
+
+.anno_date{
+    font-size: 20px;
+    font-weight: bold;
+    color: maroon;
+}
+
+.anno_head{
+    margin-top: 16px;
+    font-size: 21px;
+    font-weight: bold;
+    width: 100%;
+    height: -webkit-fill-available;
+    overflow: hidden;
+}
+
+.anno_head p{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: -webkit-fill-available;
+}
+
+.anno_head a{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    height: -webkit-fill-available;
+}
+
+#alln_main_body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 64px;
+}
+
+#select{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+}
+
+.select{
+    font-size: 41px;
+    font-weight: bold;
+    padding: 12px 24px
+}
+
+.select a:hover{
+    color: maroon;
+}
+
+#all_newss{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#change_page{
+    display: flex;
+    margin-top: 16px;
+    margin-bottom: 48px;
+}
+
+.select1{
+    font-size: 20px;
+    padding: 8px 16px;
+    font-weight: bold;
+}
+
+.select1 a{
+    color: maroon;
+}

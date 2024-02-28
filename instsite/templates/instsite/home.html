@@ -1,0 +1,91 @@
+{% extends "instsite/base.html" %}
+
+{% load static %}
+
+{% block link %}
+<link rel="stylesheet" href="{% static 'instsite/nav.css' %}">
+<link rel="stylesheet" href="{% static 'instsite/footer.css' %}">
+<link rel="stylesheet" href="{% static 'instsite/home.css' %}">
+{% endblock %}
+
+{% block script %}
+<script src="{% static 'instsite/home.js' %}"></script>
+{% endblock %}
+
+{% block title %}Home{% endblock %}
+
+{% block main %}
+<div id="home">
+    <div id="news_title" class="sp_n_t">
+        <h1 style="color: maroon;">IIITVICD Today</h1>
+        <div class="view_all" style="font-size: 24px;padding: 8px 0;display: flex;align-items: center;color: maroon;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" style="height: 16px;fill: maroon;padding: 6px;border: 1px solid maroon;margin-right: 8px;"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M3.4 81.7c-7.9 15.8-1.5 35 14.3 42.9L280.5 256 17.7 387.4C1.9 395.3-4.5 414.5 3.4 430.3s27.1 22.2 42.9 14.3l320-160c10.8-5.4 17.7-16.5 17.7-28.6s-6.8-23.2-17.7-28.6l-320-160c-15.8-7.9-35-1.5-42.9 14.3z"></path></svg><a href="{% url 'all_news' 0 %}" style="color: maroon;">View All</a></div>
+    </div>
+    <div id="news_title" style="margin-top: 24px;">
+        <h1>News</h1>
+    </div>
+    <div id="news">
+        <div style="width: 8px"></div>
+        <div id="news_pri" style="background: url('{%static news.img_path %}') no-repeat center;background-size: cover;">
+            <div class="news_pri_head">
+                <p><a href="news/{{news.id}}">{{news.head}}</a></p>
+                <p>{{news.date}}</p>
+            </div>
+        </div>
+        <div style="width: 60px"></div>
+        <div id="news_sec">
+            {%for i in newss%}
+                <div class="news_sec">
+                    <div class="news_sec_head">
+                        <p><a href="news/{{i.id}}">{{i.head}}</a></p>
+                        <p>{{i.date}}</p>
+                    </div>
+                    <img src="{% static i.img_path %}" alt="">
+                </div>
+            {% endfor %}
+            <div style="width: 8px"></div>
+        </div>
+    </div>
+    <div id="news_title">
+        <h1>Announcements</h1>
+    </div>
+    <div id="anno">
+        <div id="anno_cont">
+            {% for i in anno %}
+                <div class="anno">
+                    <div class="anno_date">
+                        <p>{{i.date}}</p>
+                    </div>
+                    <div class="anno_head">
+                        <p><a href="{% url 'anno_det' i.id %}">{{i.head}}</a></p>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div id="news_title">
+        <h1>Events</h1>
+    </div>
+    <div id="eve">
+        <div id="eve_cont">
+            {% for i in eve %}
+                <div class="eve">
+                    <div class="eve_cont">
+                        <div class="eve_date">
+                            <p>{{i.date|date:"M"}}</p>
+                            <h1>{{i.date|date:"d"}}</h1>
+                        </div>
+                        <div class="eve_head">
+                            <h1><a href="{% url 'eve_det' i.id %}">{{i.head}}</a></h1>
+                            <div class="eve_head_p">
+                                <p>{{i.date|date:"Y"}}</p>
+                                <p>{{i.time}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    
+</div>
+{% endblock %}

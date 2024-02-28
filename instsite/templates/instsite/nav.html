@@ -1,0 +1,74 @@
+{% load static %}
+
+{% block nav %}
+<div class="nav" id="navbar">
+    <a href="{% url 'home' %}"><img src="{% static image %}" id="nav-img" class="nav_img" alt="IIITV-ICD"></a>
+    <ul id="nav_ul">
+        <li>
+            <div class="nav_ul_li_div">
+                <a href="" class="nav_ul_a">INSTITUTE</a>
+                <div class="nav_drop">
+                    <ul>
+                        <li><a href="{% url 'about' %}">About</a></li>
+                        <li><a href="{% url 'director' %}">Director's Message</a></li>
+                        <li><a href="#">Board of Governors</a></li>
+                        <li><a href="http://diu.iiitvadodara.ac.in/pdf/MOU.pdf">MOU</a></li>
+                    </ul>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="nav_ul_li_div">
+                <a href="" class="nav_ul_a">ACADEMICS</a>
+                <div class="nav_drop">
+                    <ul>
+                        <li><a href="{% url 'acad_btech' %}">B.Tech</a></li>
+                        <li><a href="http://iiitvadodara.ac.in/pdf/Ordinance/01_BTech-IIITV-ordinance_English.pdf">Ordinance</a></li>
+                        <li><a href="http://iiitvadodara.ac.in/pdf/OO_E_03_List%20of%20Holidays_%202022.pdf">Holiday List</a></li>
+                        <li><a href="#">Academic Calendar</a></li>
+                    </ul>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="nav_ul_li_div">
+                <a href="" class="nav_ul_a">ADMISSION</a>
+                <div class="nav_drop">
+                    <ul>
+                        <li><a href="#">JEE</a></li>
+                        <li><a href="#">DASA</a></li>
+                    </ul>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="nav_ul_li_div">
+                <a href="" class="nav_ul_a">COMMITTEES</a>
+                <div class="nav_drop">
+                    <ul>
+                        <li><a href="#">Sports </a></li>
+                        <li><a href="#">Technical </a></li>
+                        <li><a href="#">Cultural </a></li>
+                        <li><a href="#">Literature </a></li>
+                    </ul>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="nav_ul_li_div" style="border-right: none;">
+                <a href="" class="nav_ul_a">GALLERY</a>
+            </div>
+        </li>
+    </ul>
+    <div class="login_button">
+        IIITVICD
+    </div>
+    <div id="ham" style="display: none;margin-right: 32px;">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" style="height: 33px;fill: maroon;"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"></path></svg>
+    </div>
+    <div id="ham1" style="display: none;margin-right: 32px;">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" style="height: 33px;fill: maroon;"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z"/></svg>
+    </div>
+
+</div>
+{% endblock %}
